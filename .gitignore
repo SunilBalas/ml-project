@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# .vscode folder
+.vscode/
+
+# artifacts files
+artifacts/
+
+# catboost_info files
+catboost_info/
