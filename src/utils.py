@@ -13,12 +13,12 @@ from src.exception import CustomException
 
 import dill
 
-def save_object(file_path:str, obj:ColumnTransformer) -> None:
+def save_object(file_path, obj:ColumnTransformer) -> None:
     try:
         dir_path = os.path.dirname(file_path)
-        os.makedirs(file_path, exist_ok=True)
+        os.makedirs(dir_path, exist_ok=True)
 
-        with open(file_path, 'wb') as file:
+        with open(file_path, "wb") as file:
             dill.dump(obj, file)
 
         logging.info("Saved pickle file")
